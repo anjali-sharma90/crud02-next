@@ -1,5 +1,3 @@
-// import logo from "./logo.svg";
-import "./App.css";
 import ProductProvider, { ProductConsumer } from "./Context";
 import Home from "./Components/BaseHome";
 
