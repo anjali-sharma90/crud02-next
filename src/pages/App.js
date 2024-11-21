@@ -1,14 +1,16 @@
-import styles from "@/styles/Home.module.css";
-
+// import logo from "./logo.svg";
+import "./App.css";
 import ProductProvider, { ProductConsumer } from "./Context";
-import BaseHome from "./Components/BaseHome";
+import Home from "./Components/BaseHome";
 
-export default function Home() {
+function App() {
   return (
     <ProductProvider>
       <div className="App">
-        <BaseHome />
+        <Home />
       </div>
     </ProductProvider>
   );
 }
+
+export default App;
