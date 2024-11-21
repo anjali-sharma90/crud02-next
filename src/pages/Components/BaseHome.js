@@ -23,9 +23,9 @@ export default class BaseHome extends Component {
                     <td>
                       <input
                         type="text"
-                        value={value.title}
+                        value={value?.title}
                         onChange={(e) => {
-                          value.updateValue(e, "title");
+                          value?.updateValue(e, "title");
                         }}
                       />
                     </td>
@@ -33,9 +33,9 @@ export default class BaseHome extends Component {
                     <td>
                       <input
                         type="text"
-                        value={value.info}
+                        value={value?.info}
                         onChange={(e) => {
-                          value.updateValue(e, "info");
+                          value?.updateValue(e, "info");
                         }}
                       />
                     </td>
@@ -43,9 +43,9 @@ export default class BaseHome extends Component {
                     <td>
                       <input
                         type="text"
-                        value={value.price}
+                        value={value?.price}
                         onChange={(e) => {
-                          value.updateValue(e, "price");
+                          value?.updateValue(e, "price");
                         }}
                       />
                     </td>
@@ -53,9 +53,9 @@ export default class BaseHome extends Component {
                     <td>
                       <input
                         type="text"
-                        value={value.company}
+                        value={value?.company}
                         onChange={(e) => {
-                          value.updateValue(e, "company");
+                          value?.updateValue(e, "company");
                         }}
                       />
                     </td>
@@ -64,16 +64,15 @@ export default class BaseHome extends Component {
                       <Button
                         size="sm"
                         onClick={() => {
-                          console.log("hello");
-                          value.onSave(value.id);
+                          value?.onSave(value?.id);
                         }}
                       >
-                        {value.id ? "Save" : "Add new Row"}
+                        {value?.id ? "Save" : "Add new Row"}
                       </Button>
                     </td>
                   </tr>
 
-                  {value.Alldata.map((product) => {
+                  {value?.Alldata.map((product) => {
                     return (
                       <tr>
                         <td>{product.title}</td>
@@ -85,7 +84,7 @@ export default class BaseHome extends Component {
                             size="sm"
                             variant="primary"
                             onClick={() => {
-                              value.onEdit(product.id);
+                              value?.onEdit(product.id);
                             }}
                           >
                             {" "}
@@ -96,7 +95,7 @@ export default class BaseHome extends Component {
                             size="sm"
                             variant="danger"
                             onClick={() => {
-                              value.onDelete(product.id);
+                              value?.onDelete(product.id);
                             }}
                           >
                             Delete

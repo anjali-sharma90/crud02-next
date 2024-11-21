@@ -1,4 +1,4 @@
-export const rawData = [
+const rawData = [
   {
     id: 1,
     title: "Car",
@@ -66,3 +66,5 @@ export const rawData = [
     count: 1,
   },
 ];
+
+export default rawData;
